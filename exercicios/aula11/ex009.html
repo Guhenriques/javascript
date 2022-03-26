@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            font: normal 15pt Arial;
+            background-color: #b9ebdad3;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>
+        Descubra se voce é Estrangeiro!
+    </h1>
+    Qual país voce nasceu? <input type="text" name="txt1" id="txt1">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+    </div>
+    <script>
+        function verificar () {
+            var país = document.querySelector('input#txt1')
+            var res = document.querySelector('div#res')
+            var nacionalidade = String(país.value)
+
+            if (nacionalidade == 'Brasil') {
+                res.innerHTML = '<p>Voce é <strong>Brasileiro</strong>!</p>'
+
+            } else (res.innerHTML = '<p>Voce é <strong>Estrangeiro</strong>!</p>')
+        }
+    </script>
+    
+</body>
+</html>
