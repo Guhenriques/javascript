@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e Depois</title>
+    <style>
+        body {
+            font: normal 15pt Arial;
+        }
+        
+        #botao {
+            border: solid 1px gray;
+            padding: 10px;
+            text-align: center;
+            width: 160px;
+            background-image: linear-gradient(to bottom, #d6d6d6, #f7f5f5);
+        }
+
+        #botao:hover {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>
+        Antes e Depois
+    </h1>
+    <input id="botao" type="button" value="Antecessor e Sucessor" onclick="clicar()">
+
+    <script>
+        function clicar() {
+            var numero = Number(prompt('Digite um número inteiro qualquer'))
+            var soma = numero + 1
+            var subtra = numero - 1
+            alert(`Antes de ${numero} temos o numero ${subtra}. Depois de ${numero}, temos o numero ${soma}.`)
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens</title>
+    <style>
+        body {
+            font: normal 15pt Arial;
+        }
+        .botoesM {
+            border: solid 1px gray;
+            padding: 10px;
+            text-align: center;
+            width: 110px;
+            background-image: linear-gradient(to bottom, #d6d6d6, #f7f5f5);
+        }
+        .botoesM:hover {
+            cursor: pointer;
+            background-color: #636362;
+        }
+
+        .botoesM:active {
+            background-image: none;
+            background: #cfcfcf;
+            border-style: none;
+        }
+        p {
+            font: normal 20pt Arial;
+            text-align: center;
+        }
+/*        #botoes {
+            display: inline-block;
+            border-style: solid 1px;
+            border-radius: 3px 3px 3px 3px;
+            width: 342px;
+            padding: 5px;
+            box-shadow: 2px 3px 5px 1px #00000066;
+        }
+*/
+    </style>
+</head>
+<body>
+    <h1>
+        Desafio dos botões  
+    </h1>
+    <div id="botoes">
+        <button id="botao1" class="botoesM" type="submit" onclick="clicar()">Botão 1</button>
+        <button id="botao2" class="botoesM" type="submit" onclick="clicar2()">Botão 2</button>
+        <button id="botao3" class="botoesM" type="submit" onclick="clicar3()">Botão 3</button>
+    </div>
+    <script>
+        function clicar() {
+            document.getElementById('botao1')
+            window.alert("Voce clicou no botão 1!")
+        }   
+        function clicar2() {
+            document.getElementById('botao2')
+            window.alert("Voce clicou no botão 2!")
+        }   
+        function clicar3() {
+            document.getElementById('botao3')
+            window.alert("Voce clicou no botão 3!")
+        }   
+    </script>
+</body>
+</html>

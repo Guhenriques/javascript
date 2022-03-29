@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando o Troco</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+        #botao {
+            border: solid 1px gray;
+            padding: 10px;
+            text-align: center;
+            width: 180px;
+            background-image: linear-gradient(to bottom, #d6d6d6, #f7f5f5);
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Calculando o Troco
+    </h1>
+
+    <input id="botao" type="button" value="Comprar um produto" onclick="calculoTroco()">
+
+    <script>
+        function calculoTroco() {
+            var produto = prompt('Digite o nome do produto que deseja comprar:')
+            var valor = Number(prompt(`Quanto custa esse/essa ${produto}?`))
+            if (valor === null)
+                alert('Que pena! Voce nao me deu a chance de te conhecer.')
+            var pago = Number(prompt(`Qual foi o valor que voce deu para pagar esse ${produto}`))
+            var troco = [pago - valor]
+            alert(`Voce comprou um ${produto} que custou R$${valor}.\nDeu R$${pago} em dinheiro e vai receber R$${troco} de troco.\nVolte sempre!`)
+           
+
+            
+            
+        }
+    </script>
+    
+</body>
+</html>
