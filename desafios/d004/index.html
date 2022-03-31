@@ -16,6 +16,16 @@
             width: 180px;
             background-image: linear-gradient(to bottom, #d6d6d6, #f7f5f5);
         }
+
+        #botao:active {
+            background-image: none;
+            background: #999999;
+            border-style: none;
+        }
+
+        #botao:hover {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -28,17 +38,21 @@
     <script>
         function calculoTroco() {
             var produto = prompt('Digite o nome do produto que deseja comprar:')
-            var valor = Number(prompt(`Quanto custa esse/essa ${produto}?`))
-            if (valor === null)
-                alert('Que pena! Voce nao me deu a chance de te conhecer.')
-            var pago = Number(prompt(`Qual foi o valor que voce deu para pagar esse ${produto}`))
-            var troco = [pago - valor]
-            alert(`Voce comprou um ${produto} que custou R$${valor}.\nDeu R$${pago} em dinheiro e vai receber R$${troco} de troco.\nVolte sempre!`)
-           
 
-            
-            
+            if (produto === null || produto === undefined) // arrumar
+            alert('Que pena nao poder te ajudar! :(')
+
+
+            var valor = Number(prompt(`Quanto custa esse/essa ${produto}?`))
+            var pago = Number(prompt(`Qual foi o valor que voce deu para pagar esse ${produto}?`))
+            var troco = [pago - valor]
+
+            if (pago <= valor) {
+            alert('Voce nao tem dinheiro suficiente!')
+            } else
+            alert(`Voce comprou um ${produto} que custou R$${valor}.\nDeu R$${pago} em dinheiro e vai receber R$${troco} de troco.\nVolte sempre!`) 
         }
+        
     </script>
     
 </body>
