@@ -38,21 +38,23 @@
     <script>
         function calculoTroco() {
             var produto = prompt('Digite o nome do produto que deseja comprar:')
-
-            if (produto === null || produto === undefined) // arrumar
-            alert('Que pena nao poder te ajudar! :(')
-
+            console.log(typeof(produto))
+            if (!produto) {
+                alert('Que pena nao poder te ajudar! :(')
+                return 
+            } 
 
             var valor = Number(prompt(`Quanto custa esse/essa ${produto}?`))
             var pago = Number(prompt(`Qual foi o valor que voce deu para pagar esse ${produto}?`))
             var troco = [pago - valor]
 
             if (pago <= valor) {
-            alert('Voce nao tem dinheiro suficiente!')
-            } else
-            alert(`Voce comprou um ${produto} que custou R$${valor}.\nDeu R$${pago} em dinheiro e vai receber R$${troco} de troco.\nVolte sempre!`) 
+                alert('Voce nao tem dinheiro suficiente!')
+            } else {
+                alert(`Voce comprou um ${produto} que custou R$${valor}.\nDeu R$${pago} em dinheiro e vai receber R$${troco} de troco.\nVolte sempre!`) 
+            }
         }
-        
+       
     </script>
     
 </body>
