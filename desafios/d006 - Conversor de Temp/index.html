@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Temperaturas</title>
+  <style>
+    
+    body {
+            font: normal 16pt Arial;
+            background-color: #75ffcab0;
+        }
+        
+        body h1 {
+            margin-top: 10px;
+        }
+
+        main {
+            background-color: whitesmoke;
+            padding: 10px;
+            width: 80%;
+            height: auto;
+            border-radius: 10px 10px 10px 10px;
+            text-align: center;
+            margin: auto;
+            color: rgb(17, 71, 22);
+            box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.308);
+        }
+
+        #botao {
+            border: solid 1px gray;
+            padding: 10px;
+            text-align: center;
+            width: 180px;
+            background-image: linear-gradient(to bottom, #d6d6d6, #f7f5f5);
+        
+        }
+
+        #botao:active {
+            background-image: none;
+            background: #999999;
+            border-style: none;
+        }
+
+        #botao:hover {
+            cursor: pointer;
+        }
+
+        #res {
+            padding-top: 15px;
+            position: right;
+        }
+
+  </style>
+</head>
+<body>
+  <main>
+    <h1>
+      Conversor de Temperaturas
+    </h1>
+    <div id="res">
+      <input id="botao" type="button" value="Converter" onclick="converter()">
+      <p>
+        Clique no botão acima para iniciar.
+      </p>
+  </main>
+
+    <script>
+      function converter() {
+        var graus = Number(prompt('Digite uma temperatura em ºC'))
+        if (!graus) {
+          alert('Você não digitou uma temperatura válida!')
+          return
+        }
+        var kelvin = [graus + 273]
+        var fahrenheit = [graus * 1.8 + 32]
+        var res = document.querySelector('div#res')
+        res.innerHTML = (`<h2>A temperatura de ${graus}ºC, corresponde a...</h2>`) + (`<p>${kelvin}ºK (Kelvin)</p>`) + (`<p>${fahrenheit}ºF (Fahrenheit)</p>`)
+      }
+    </script>
+
+  </div>
+</body>
+</html>
