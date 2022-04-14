@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Vamos Contar
+        </h1>
+    </header>
+
+    <section>
+        <div class="line">
+            Início: <input type="number" name="inicio1" id="inicio">
+        </div>
+        <div class="line">
+            Fim: <input type="number" name="fim1" id="fim">
+        </div>
+        <div class="line">
+            Passo: <input type="number" name="passo1" id="passo">
+        </div>
+
+        <div id="res">
+            <input type="button" value="Contar" onclick="contagem()">
+            <p>Preparando a contagem...</p>
+        </div>
+
+        <p id="demo"></p>
+    </section>
+
+    <script>
+        function contagem() {
+            var inicio = document.getElementById('inicio')
+            var fim = document.getElementById('fim')
+            var passo = document.getElementById('passo')
+            var n1 = Number(inicio.value)
+            var n2 = Number(fim.value)
+            var n3 = Number(passo.value)
+            var res = document.getElementById('res')
+            res.innerHTML = `Contando:<br>`
+
+            if (ini.value.length == 0 || Number(fim.value) <= Number(ini.value) || Number(ini.value) < 0) {
+                res.innerHTML = `Impossível Contar!`
+            } else {
+                for (var n1;n1<=n2;n1 += n3) {
+                res.innerHTML += `${n1}, `
+                } 
+            }
+        }
+    </script>
+
+    <footer>
+        <p>
+            &copy; Gustavo Henriques
+        </p>
+    </footer>
+
+   <!--<script src="script.js"></script>--> 
+    
+</body>
+</html>

@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conversor de Temperaturas</title>
+  <title>Conversor de Moeda</title>
   <style>
     
     body {
             font: normal 16pt Arial;
-            background-color: #75ffcab0;
+            background-color: #fdf9b7;
         }
         
         body h1 {
@@ -24,7 +24,7 @@
             border-radius: 10px 10px 10px 10px;
             text-align: center;
             margin: auto;
-            color: rgb(17, 71, 22);
+            color: #727008;
             box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.308);
         }
 
@@ -57,30 +57,33 @@
 <body>
   <main>
     <h1>
-      Conversor de Temperaturas
+      Conversor de Real(R$) para Dólar($)
     </h1>
     <div id="res">
-      <input id="botao" type="button" value="Converter" onclick="converter()">
+      <input id="botao" type="button" value="Converter" onclick="conversorDeMoeda()">
       <p>
         Clique no botão acima para iniciar.
       </p>
     </div>
   </main>
 
-    <script>
-      function converter() {
-        var graus = Number(prompt('Digite uma temperatura em ºC'))
-        if (!graus) {
-          alert('Você não digitou uma temperatura válida!')
-          return
-        }
-        var kelvin = [graus + 273]
-        var fahrenheit = [graus * 1.8 + 32]
-        var res = document.querySelector('div#res')
-        res.innerHTML = (`<h2>A temperatura de ${graus}ºC, corresponde a...</h2>`) + (`<p>${kelvin}ºK (Kelvin)</p>`) + (`<p>${fahrenheit}ºF (Fahrenheit)</p>`)
-      }
-    </script>
-
-  </div>
+  <script>
+    function conversorDeMoeda() {
+      var cotacao = Number(prompt('Antes de iniciar. Quanto está a cotação do dólar hoje?'))
+      if (!cotacao) {
+        alert('Você não digitou um valor válido!')
+        return
+      } 
+      var reais = (prompt('Quantos reais(R$) você gostaria de trocar em dólar?'))
+      var dolar = [reais / cotacao]
+      var dolinha = dolar.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD',
+      });
+      var res = document.querySelector('div#res')
+      res.innerText = (`Voce trocou R$${reais} e recebeu ${dolinha} dólares, na cotação de ${cotacao}.`)
+    }
+  </script>
+  
 </body>
 </html>
