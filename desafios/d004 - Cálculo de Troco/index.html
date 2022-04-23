@@ -47,6 +47,7 @@
             var valor = Number(prompt(`Quanto custa esse/essa ${produto}?`))
             var pago = Number(prompt(`Qual foi o valor que voce deu para pagar esse ${produto}?`))
             var troco = [pago - valor]
+            console.log(typeof 'troco')
 
             if (pago <= valor) {
                 alert('Voce nao tem dinheiro suficiente!')

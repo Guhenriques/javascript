@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cálculo de Desconto</title>
+</head>
+<style>
+        body {
+          font: normal 15pt Arial;
+        }
+        #botao {
+            border: solid 1px gray;
+            padding: 10px;
+            text-align: center;
+            width: 180px;
+            background-image: linear-gradient(to bottom, #d6d6d6, #f7f5f5);
+        }
+        #botao:active {
+            background-image: none;
+            background: #999999;
+            border-style: none;
+        }
+        #botao:hover {
+            cursor: pointer;
+        }
+</style>
+<body>
+
+  <main>
+    <h1>
+      Calcular Desconto
+    </h1>
+    <div>
+      <input id="botao" type="button" value="Desconto de 10%" onclick="desconto()">
+    </div>
+    <div id="res">
+      <p>Clique no botao acima para iniciar</p>
+    </div>
+  </main>
+
+  <script>
+    function desconto() {
+      let produto = prompt('Qual é o nome do produto que voce está comprando?')
+      if (!produto) {
+        alert('Nome de produto inválido, tente novamente!')
+        return
+      }
+      let preco = Number(prompt(`Qual o valor desse ${produto}?`))
+      if (!preco) {
+        alert('Valor inválido! Tente novamente.')
+      } else {
+        let desc = [preco / 10]
+        let novo = [preco - desc]
+        let res = document.getElementById('res')
+        res.innerHTML = (`<h1>Calculando desconto de 10% para ${produto}</h1>`) + (`<p>O preço original era R$${preco}</p>`) + (`<p>Voce acaba de ganhar R$${desc} de desconto (10%)</p>`) + (`<p>Novo preço com desconto: R$${novo}</p>`)
+      }
+    }
+  </script>
+
+</body>
+
+</html>
