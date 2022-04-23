@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+:root {
+  --cor0: #0d1325;
+  --cor1: #131b35b2;
+  --cor2: #2d315a7c;
+  --cor3: #dad8d8;
+
+}
+
+body {
+  background-color: var(--cor0);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-style: bold;
+  text-indent: 10px;
+}
+
+#foto1 {
+  position: relative;
+  padding: 30px;
+  padding-bottom: 0px;
+  padding-top: 30px;
+}
+
+#nome {
+  display: inline-block;
+  color: var(--cor3);
+  font-size: 22pt;
+}
+
+
+header {
+  background-color: var(--cor1);
+}
+
+#nav1 {
+  color: var(--cor3);
+  margin: 0;
+  display: inline-block;
+}
+
+#nav2 {
+  text-align: end;
+  padding-bottom: 20px;
+}
+
+#nav2 a {
+  color: var(--cor3);
+  padding: 20px;
+  margin: 20px;
+  padding-left: 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: var(--cor2);
+  border-radius: 30px;
+}
