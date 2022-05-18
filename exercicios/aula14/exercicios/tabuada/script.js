@@ -1,4 +1,4 @@
-function tabuada () {
+function tabuada() {
   let num = document.getElementById('numb1')
   let tab = document.getElementById('seltab')
   if (num.value.length == 0) {
@@ -15,5 +15,5 @@ function tabuada () {
       c++ // incrementa o valor de C para partir a 2, 3, 4...
     }
   } 
- 
+ console.log(typeof'n')
 }

@@ -1,10 +1,10 @@
 // RECURSIVIDADE
 
 function fatorial (n) {
-  if (n == 1) {
+  if (n == 1) { // se numero recebido for igual a 1
     return 1
-  } else {
-    return n * fatorial(n-1)
+  } else { // se nao for 1, o fatorial de um numero eh o numero X dele menos 1
+    return n * fatorial(n-1) // fatorial chama ele mesmo
   }
 }
 
