@@ -46,7 +46,7 @@ function finalizar() {
     let menor = valores[0]
     let soma = 0
     let media = 0
-    for (let pos in valores) {        // para cada posicao in valores, verificar se o valores na posicao pos, for maior que o maior valor, o maior valor passa a ser...
+    for (let pos in valores) {        // para cada posicao in valores, verificar se o valores na posicao pos, for maior que o maior valor, entao o maior valor passa a ser...
       soma += valores[pos]
       if(valores [pos] > maior)
         maior = valores[pos]
