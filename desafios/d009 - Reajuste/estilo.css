@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+#botao {
+  width: auto;
+  height: 55px;
+}
+#botao:hover {
+  cursor: pointer;
+}
